@@ -12,7 +12,8 @@ const stories = {
       'Eles acreditaram que Mani havia se transformado naquele alimento como um presente espiritual para sua tribo.',
       'Desde então, a mandioca passou a ser um dos alimentos mais importantes, simbolizando vida, renovação e a conexão entre os seres humanos e a natureza.'
     ],
-    video: 'https://www.youtube.com/watch?v=zSBsJTSX3AE'
+    video: 'https://www.youtube.com/watch?v=zSBsJTSX3AE',
+    info: 'A lenda da Mani tem origem nos povos indígenas brasileiros, especialmente entre tribos de língua Tupi. Ela explica o surgimento da mandioca.'
   },
 
   caipora: {
@@ -28,7 +29,8 @@ const stories = {
       'Ela é vista como um símbolo de equilíbrio, mostrando que o ser humano deve viver em harmonia com o meio ambiente.',
       'A lenda da Caipora reforça a importância de cuidar das florestas e preservar a vida que existe nelas.'
     ],
-    video: 'https://youtu.be/7UxylJ4XChI?si=yHXnVqFu0XGkXEGA'
+    video: 'https://youtu.be/7UxylJ4XChI?si=yHXnVqFu0XGkXEGA',
+    info: 'A Caipora faz parte do folclore brasileiro e tem origem nas crenças dos povos indígenas, principalmente os de tradição Tupi-Guarani. Ela protege os animais da floresta.'
   },
 
   curupira: {
@@ -44,7 +46,9 @@ const stories = {
       'Apesar de parecer assustador, seu objetivo é manter o equilíbrio da natureza e proteger a vida.',
       'A lenda do Curupira ensina que devemos respeitar o meio ambiente e usar os recursos naturais com responsabilidade.'
     ],
-    video: 'https://youtu.be/gKpiIzfNQA8?si=e3up2BfPtORfpXsT'
+    video: 'https://youtu.be/gKpiIzfNQA8?si=e3up2BfPtORfpXsT',
+    info: 'O Curupira é uma figura do folclore indígena brasileiro, com origem nos povos Tupi-Guarani. Ele é considerado o guardião das florestas.'
+
   }
 };
 
@@ -58,6 +62,7 @@ const titulo = document.querySelector('h1');
 const imagem = document.getElementById('imagem');
 const progress = document.getElementById('progress');
 const videoLink = document.getElementById('videoLink');
+const infoText = document.getElementById('infoText');
 
 let typing;
 let typingActive = false;
@@ -98,6 +103,8 @@ function updateUI() {
 
   videoLink.href = current.video;
   videoLink.textContent = `Assistir vídeo: ${current.title}`;
+
+  infoText.textContent = current.info;
 }
 
 function next() {
